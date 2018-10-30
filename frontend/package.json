@@ -1,0 +1,16 @@
+{
+  "name": "mws-restaurant-stage-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pranavj7Z/Mobile-web-specialist-Stage-3.git",
+  "author": "Pranav Jayaraj <pranavjayaraj7@gmail.com>",
+  "scripts": {
+    "styles": "npx sass scss/styles.scss css/styles.css --watch",
+    "start": "npx live-server --port=1336 --host=localhost --cors"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "sass": "^1.13.1"
+  }
+}
