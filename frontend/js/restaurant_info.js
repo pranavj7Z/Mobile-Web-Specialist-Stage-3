@@ -197,7 +197,6 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 function addReview(e) {
   e.preventDefault();
   // DBHelper.syncOfflineReviewToServer();
-  
   const curId = getParameterByName('id');
   const name = document.getElementById("name").value;
   const rating = document.getElementById("rating").value;
@@ -226,6 +225,7 @@ function addReview(e) {
     
       refreshReviewsHTML(curId);
     })();
+  document.getElementById("post-review-form").reset();
   } else {
     // offline, store reviews in seperate idb
     // append new review to end of list for now 
@@ -269,15 +269,15 @@ refreshReviewsHTML = (id) => {
     }
   });
 }
-/**
- * Create all reviews HTML and add them to the webpage.
- */
+
+
+
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h3');
+  const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
-  
+
   if (!reviews) {
     const noReviews = document.createElement('p');
     noReviews.innerHTML = 'No reviews yet!';
@@ -285,15 +285,10 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
-  for(review of reviews) {
+  reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
-  };
-  // reviews.forEach(review => {
-  //   ul.appendChild(createReviewHTML(review));
-  // });
+  });
   container.appendChild(ul);
-  //container.insertAdjacentHTML('afterbegin', ul);
-  //container.insertAdjacentHTML('beforeend', formHTML);
 }
 
 

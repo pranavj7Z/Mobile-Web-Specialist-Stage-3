@@ -59,31 +59,37 @@
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
     </section>
+  
+    
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
-<div id="bg-top"></div>
-
-      <ul id="reviews-list"></ul>
- <section id="post-review">
-      <h3>Post review</h3>
-      <form id="post-review-form">
-        <input type="hidden" name="restaurant_id" id="restaurant_id" value="" />
-        
+ <section id="reviews-container">
+<section id="post-review">
+      <form id="post-review-form" onsubmit="addReview(event)">
+          <h1>Add Review</h1>
+        <p> </p>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
         
         <label for="rating">Rating</label>
         <input type="number" id="rating" name="rating" min="0" max="5" required>
 
-        <label for="comments">Comment</label>
-        <textarea id="comments" name="comments" rows="9" required></textarea>
+        <label for="msg">Comment</label>
+        <textarea id="msg" name="comments" rows="9" required></textarea>
 
-        <button type="submit" class="post-form-button">Send</button>
+        <button type="submit">Add Review</button>
       </form>
     </section>
+   </section>
+<p><p><p>
+    <section id="reviews-container">
+<div id="bg-top"></div>
+
+      <ul id="reviews-list"></ul>
+ 
     </section>
     <!-- End reviews -->
+
 
 </div>  
 </main>
