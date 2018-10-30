@@ -13,13 +13,13 @@ node server
 
 Secondly, start the frontend server:
 
+```
 cd frontend 
 
-#run a python server
 python2 -m SimpleHTTPServer 8080
 
 or
 
-#run a node server
 npm install
 npm start
+```
