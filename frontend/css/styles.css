@@ -289,11 +289,13 @@ nav h1 a:focus {
   padding: 30px 10px 10px 0px;
   margin-bottom: 40px;
   position: relative;
+  margin-top:-100px;
   margin-left: 5%;
   width: calc(70%); }
 
 #reviews-container h2 {
   color: #f58500;
+
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -429,7 +431,7 @@ nav h1 a:focus {
     text-align: center; }
   #reviews-container {
     width: 100%;
-    margin-top: 50px;
+    margin-top: -100px;
     margin-left: 2.5%; }
   #reviews-list li p:last-of-type {
     border-bottom: none; }
