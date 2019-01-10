@@ -1,4 +1,4 @@
-# Mobile Web Specialist Certification Course - Stage 3
+# Restaurant Web Application
 
 > A restaurant app leveraging offline capabilities 🍕
 
